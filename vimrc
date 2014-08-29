@@ -53,6 +53,9 @@ set cursorline
 set nobackup
 set noswapfile
 
+" <Ctrl-l> redraws the screen and removes any search highlighting.
+nnoremap <silent> <C-l> :nohl<CR><C-l>
+
 " Gundo (https://github.com/vim-scripts/Gundo)
 nnoremap <F5> :GundoToggle<CR>
 
