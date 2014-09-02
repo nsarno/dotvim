@@ -27,7 +27,7 @@ set backspace=indent,eol,start
 
 " Basic stuff
 set nowrap        		" don't wrap lines
-set tabstop=2     		" a tab is four spaces
+set tabstop=2     		" a tab is two spaces
 set autoindent    		" always set autoindenting on
 set copyindent    		" copy the previous indentation on autoindenting
 set number        		" always show line numbers
@@ -58,6 +58,8 @@ nnoremap <silent> <C-l> :nohl<CR><C-l>
 
 " Gundo (https://github.com/vim-scripts/Gundo)
 nnoremap <F5> :GundoToggle<CR>
+
+nnoremap <silent> <leader>w :w<CR>
 
 " Autoreload .vimrc
 augroup reload_vimrc " {
