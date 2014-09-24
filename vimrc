@@ -18,10 +18,6 @@ filetype plugin indent on
 " are preserved while the buffer is open.
 set hidden
 
-" Quickly edit/reload the vimrc file
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
-nmap <silent> <leader>sv :so $MYVIMRC<CR>
-
 " Allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
@@ -33,7 +29,6 @@ set copyindent    		" copy the previous indentation on autoindenting
 set number        		" always show line numbers
 set shiftwidth=2  		" number of spaces to use for autoindenting
 set shiftround    		" use multiple of shiftwidth when indenting with '<' and '>'
-set showmatch     		" set show matching parenthesis
 set ignorecase    		" ignore case when searching
 set smartcase     		" ignore case if search pattern is all lowercase, case-sensitive otherwise
 set smarttab      		" insert tabs on the start of a line according to shiftwidth, not tabstop
@@ -53,12 +48,23 @@ set cursorline
 set nobackup
 set noswapfile
 
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" MAPPINGS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Quickly edit/reload the vimrc file
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
+
 " <Ctrl-l> redraws the screen and removes any search highlighting.
 nnoremap <silent> <C-l> :nohl<CR><C-l>
 
 " Gundo (https://github.com/vim-scripts/Gundo)
 nnoremap <F5> :GundoToggle<CR>
 
+" Quick save
 nnoremap <silent> <leader>w :w<CR>
 
 " Autoreload .vimrc
