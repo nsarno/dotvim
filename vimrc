@@ -23,6 +23,7 @@ set backspace=indent,eol,start
 
 " Basic stuff
 set nowrap        		" don't wrap lines
+set expandtab         " use spaces instead of tabs
 set tabstop=2     		" a tab is two spaces
 set autoindent    		" always set autoindenting on
 set copyindent    		" copy the previous indentation on autoindenting
@@ -41,6 +42,11 @@ set undolevels=1000      " use many muchos levels of undo
 set title                " change the terminal's title
 set visualbell           " don't beep
 set noerrorbells         " don't beep
+
+" Highlights tabs
+
+hi Tab gui=underline guifg=blue ctermbg=blue
+nmap <silent> <leader>ht :syntax match Tab /\t/<CR>
 
 set cursorline
 
